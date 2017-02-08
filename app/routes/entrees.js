@@ -9,8 +9,8 @@ module.exports = function(app) { //exposes module to server.js
   router.route('/entrees')
     // CREATE
     .post(function(req, res) {
-      console.log('somthing is happening');
-      Entree.create(req.body.product)
+      console.log('something is happening');
+      Entree.create(req.body.entree)
         .then((entree) => {res.json(entree); })
         .catch((err) => { if(err) console.log(err); });
     })
